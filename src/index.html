@@ -1,29 +1,130 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Webová aplikace</title>
-  </head>
-  <body>
-    <div id="app">
-      <div class="container">
-        <header>
-          <div class="logo"></div>
-          <h1>Webová aplikace</h1>
-        </header>
-        <main>
-          <p>Startovací šablona pro webovou aplikaci v čistém JavaScriptu. Vytvořeno pomocí <a href="https://www.npmjs.com/package/create-czechitas-app">create-czechitas-app</a>.</p>
-        </main>
-        <footer>
-          <p>Czechitas, Digitální akademie: Web</p>
-        </footer>
-      </div>
-    </div>
-    <script>
-      console.log("Test")
 
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Webová aplikace</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <header>
+        <div class="logo"></div>
+        <h1>Webová aplikace</h1>
+      </header>
+      <main>
+        <p>Startovací šablona pro webovou aplikaci v čistém JavaScriptu. Vytvořeno pomocí <a
+            href="https://www.npmjs.com/package/create-czechitas-app">create-czechitas-app</a>.</p>
+      </main>
+      <footer>
+        <p>Czechitas, Digitální akademie: Web</p>
+      </footer>
+    </div>
+  </div>
+  <script>
+    /*
+    const jePravda = true
+    const neniPravda = false
+
+    console.log("Porovnej:")
+    console.log("5 > 3", 5 > 3)
+    console.log("1 > 3", 1 > 3)
+    console.log("5 >= 3", 5 >= 3)
+    console.log("5 <= 3", 5 <= 3)
+    console.log("5 < 3", 5 < 3)
+    console.log("5 === 3", 5 === 3)
+    console.log("5 == 5", 5 == 5)
+    console.log("5 !== 5", 5 !== 5)
+    
+    console.log(5+6)
+    console.log("5"+"6")
+
+    const a = '5'
+    const b = '6'
+    console.log(a + b)
+   
+
+    const vek = Number(prompt("Zadej svůj věk:"))
+    console.log("Je plnoletý: ", vek === 15)
+    
+
+    if (vek >= 18) {
+      console.log("Věk je větší nebo roven 18.")
+      alert("Jste plnoletý, pojďte.")
+    } else {
+      console.log("Uživatel je moc mladý.")
+      if (vek < 10) {
+        alert("Mléčný bar je vedle.")
+      } else if (vek < 15) {
+        alert("Ještě nejsi plnoletý.")
+      } else if (vek < 17) {
+        alert("Ještě si počkej.")
+      }
+      alert("")
+    }
+    console.log("Pokračuji dál...")
+
+    if ((vek >= 18) && (vek <= 26)) {
+      alert("Studenti jsou tu vítáni.")
+    }
+    if (vek >= 18 || vek <= 26) {
+      alert ("Studenti jsou vítáni.")
+    }
+    if (!(vek >= 18)) {
+      alert("Studenti nejsou vítáni")
+    }
+    */
+    /* nefunkční ale pokus dobrý
+
+    let name = prompt("Zadej své jméno")
+    let age = Number(prompt("Zadej svůj věk"))
+    let password = prompt("Zadej své heslo")
+
+    if (age >= 65) {
+      document.body.innerHTML = "Věk v pořádku"
+    } else {
+      document.body.innerHTML = "Nízký věk"
+    };
+
+    if (password.length < 8) {
+      document.body.innerHTML = "Slabé heslo"
+    } else {
+      document.body.innerHTML = ""
+    }
+    */
+    //const age = Number(prompt('Zadej svůj věk:'))
+    if (age >= 65) {
+      const heslo = prompt('V pořádku. Teď zadej heslo:')
+      if (heslo.length <= 8) {
+        document.body.innerHTML = 'Slabé heslo.'
+      } else {
+        document.body.innerHTML = 'Heslo je v pořádku.'
+      }
+    } else {
+      document.body.innerHTML = 'Nízký věk.'
+    }
+
+
+    const plnaCena = 12
+    let cena = ''
+    const age = Number(prompt('Zadejte svůj věk:'))
+    if (age < 6) {
+      cena = 0
+    } else if (age >= 6 && age <= 26) {
+      cena = plnaCena * 0.65
+    } else if (age >= 27 && age <= 64) {
+      cena = plnaCena
+    } else {
+      cena = plnaCena * 0.5
+    }
+    cena = Math.ceil(cena)
+    document.body.innerHTML = 'Cena lístku je ' + cena + ' Eur.'
+    
+
+  </script>
+</body>
+
 </html>
